@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="test_file.css" rel="stylesheet" type="text/css">
+    <script src="test_file.js" type="text/javascript"></script>
+    <link href="informatica_logo.png" rel="icon" type="image/x-icon">
+    <title> Informatica Internal Tool </title>
+
+</head>
+<body>
+
+<form>
+
+    <div class="title">
+        <img alt="logo" src="informatica_logo.png">
+        <h1>Informatica Repository Restore Tool</h1>
+    </div>
+
+
+    <!-- Three columns -->
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:darkorange;">
+            Domain Details
+        </div>
+        <div class="column" onclick="openTab('b2');" style="background:blue;">
+            TSFTP Details
+        </div>
+        <div class="column" onclick="openTab('b3');" style="background:orangered;">
+            Database Details
+        </div>
+    </div>
+
+    <!-- Full-width columns: (hidden by default) -->
+    <div class="containerTab" id="b1" style="display:none;background:darkorange">
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <h2>Domain Details</h2>
+        Repository Service Name : <input class="fields" name="rs" required type="text">
+        Console URL: <input class="fields" name="c_url" required type="text">
+        Primary NodeName: <input class="fields" name="node" required type="text">
+        Backup Directory: <input class="fields" name="backup_dir" required type="text">
+        Server Username: <input class="fields" name="s_username" required type="text">
+        Server Password: <input class="fields" name="s_password" required type="text">
+        Console Username: <input class="fields" name="c_username" required type="text">
+        Console Password: <input class="fields" name="c_password" required type="text">
+    </div>
+
+    <div class="containerTab" id="b2" style="display:none;background:blue">
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <h2>TSFTP Details</h2>
+        TSFTP Location : <input class="fields" name="tsftp" required type="text">
+        File Name: <input class="fields" name="tsftp_filename" required type="text"></div>
+
+    <div class="containerTab" id="b3" style="display:none;background:orangered">
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <h2>Database Details</h2>
+        Database Type : <input class="fields" name="dbtype" required type="text">
+        Database Username: <input class="fields" name="db_username" required type="text">
+        Database Password: <input class="fields" name="db_password" required type="text">
+        DB Connection String: <input class="fields" name="db_connecstring" required type="text"></div>
+
+    <button id="submit_button" type="button">SUBMIT</button>
+
+</form>
+</body>
+</html>
